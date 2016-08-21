@@ -23,6 +23,7 @@
     </sprites>
     <sprite>sprites\spr_damage</sprite>
     <sprite>sprites\spr_expr</sprite>
+    <sprite>sprites\spr_health</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
@@ -32,6 +33,7 @@
     <scripts name="Helper Scripts">
       <script>scripts\scr_get_input.gml</script>
       <script>scripts\scr_get_face.gml</script>
+      <script>scripts\scr_chance.gml</script>
     </scripts>
     <scripts name="Player States">
       <script>scripts\scr_move_state.gml</script>
@@ -59,6 +61,7 @@
     <object>objects\obj_damage</object>
     <object>objects\obj_player_stats</object>
     <object>objects\obj_expr</object>
+    <object>objects\obj_health</object>
     <object>objects\obj_door</object>
   </objects>
   <rooms name="rooms">

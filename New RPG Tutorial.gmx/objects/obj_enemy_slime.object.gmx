@@ -58,6 +58,11 @@ targety = 0;
             <kind>1</kind>
             <string>/// Create experience drop
 instance_create(x, y, obj_expr);
+if(scr_chance(0.5)) {
+    instance_create(x + choose(random_range(-6, -8), irandom_range(6, 8)),
+        y + choose(irandom_range(-6, -8), irandom_range(6, 8)),
+        obj_health);
+}
 </string>
           </argument>
         </arguments>
