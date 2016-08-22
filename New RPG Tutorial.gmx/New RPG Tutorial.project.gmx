@@ -24,6 +24,8 @@
     <sprite>sprites\spr_damage</sprite>
     <sprite>sprites\spr_expr</sprite>
     <sprite>sprites\spr_health</sprite>
+    <sprite>sprites\spr_dialog_box</sprite>
+    <sprite>sprites\spr_sign</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
@@ -34,6 +36,7 @@
       <script>scripts\scr_get_input.gml</script>
       <script>scripts\scr_get_face.gml</script>
       <script>scripts\scr_chance.gml</script>
+      <script>scripts\scr_string_copy_words.gml</script>
     </scripts>
     <scripts name="Player States">
       <script>scripts\scr_move_state.gml</script>
@@ -52,21 +55,27 @@
     </scripts>
   </scripts>
   <objects name="objects">
+    <object>objects\obj_lifeform_parent</object>
+    <object>objects\obj_input</object>
     <object>objects\obj_player</object>
-    <object>objects\obj_wall</object>
+    <object>objects\obj_player_stats</object>
     <object>objects\obj_view</object>
     <object>objects\obj_dash_effect</object>
     <object>objects\obj_enemy_slime</object>
-    <object>objects\obj_lifeform_parent</object>
     <object>objects\obj_damage</object>
-    <object>objects\obj_player_stats</object>
+    <object>objects\obj_wall</object>
     <object>objects\obj_expr</object>
     <object>objects\obj_health</object>
     <object>objects\obj_door</object>
+    <object>objects\obj_speaker</object>
+    <object>objects\obj_dialog</object>
+    <object>objects\obj_sign</object>
+    <object>objects\obj_pause_menu</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_one</room>
     <room>rooms\rm_two</room>
+    <room>rooms\rm_pause</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

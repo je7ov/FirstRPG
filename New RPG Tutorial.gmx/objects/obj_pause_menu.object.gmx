@@ -25,9 +25,39 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Initialize lifeform
-phy_fixed_rotation = true;
-hp = 3;
+            <string>/// Initialize pause menu
+title = "Game Pause";
+
+option[0] = "Return";
+option[1] = "Save";
+option[2] = "Load";
+option[3] = "Quit";
+
+// Menu index
+menu_index = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Menu alarm
 </string>
           </argument>
         </arguments>
@@ -50,58 +80,25 @@ hp = 3;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Control depth
-depth = -y;
-// Death
-if(hp &lt;= 0) {
-    instance_destroy();
+            <string>/// Control menu
+if(alarm[0] &lt;= 0) {
+    if(obj_input.down_key) {
+        if(menu_index &lt; array_length_1d(option) -1) {
+            menu_index++;
+        } else {
+            menu_index = 0;
+        }
+        alarm[0] = room_speed / 6;
+    }
+    if(obj_input.up_key) {
+        if(menu_index &gt; 0) {
+            menu_index--;
+        } else {
+            menu_index = array_length_1d(option) -1;
+        }
+        alarm[0] = room_speed / 6;
+    }
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_wall">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Collide
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_lifeform_parent">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Collide
 </string>
           </argument>
         </arguments>
