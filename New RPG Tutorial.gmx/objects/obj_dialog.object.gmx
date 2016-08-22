@@ -34,6 +34,7 @@ spd = 1;
 display_scale = display_get_gui_width() / view_wview[0];
 width = sprite_width * display_scale;
 margin = 8;
+audio_sound_gain(snd_text, .15, 0);
 </string>
           </argument>
         </arguments>
@@ -84,7 +85,12 @@ var yy = (y - view_yview[0]) * display_scale;
 draw_text_ext(xx + margin, yy + margin, text_visible, -1, width - (margin * 2));
 
 // Add to the count
-text_count += spd;
+
+if(text_count &lt;= string_length(text[text_page])) {
+    text_count += spd;
+    //show_message(string(text_count) + ", " + string(string_length(text[text_page])));
+    audio_play_sound(snd_text, 5, false);
+}
 </string>
           </argument>
         </arguments>

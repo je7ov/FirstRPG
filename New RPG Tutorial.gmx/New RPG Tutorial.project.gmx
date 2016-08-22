@@ -4,7 +4,16 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_exp</sound>
+    <sound>sound\snd_player_takes_damage</sound>
+    <sound>sound\snd_player_dash</sound>
+    <sound>sound\snd_sword_attack</sound>
+    <sound>sound\snd_enemy_die</sound>
+    <sound>sound\snd_background_music</sound>
+    <sound>sound\snd_text</sound>
+    <sound>sound\snd_dark_blast</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_door</sprite>
@@ -26,6 +35,14 @@
     <sprite>sprites\spr_health</sprite>
     <sprite>sprites\spr_dialog_box</sprite>
     <sprite>sprites\spr_sign</sprite>
+    <sprites name="chinlin">
+      <sprite>sprites\spr_chinlin_stand_right</sprite>
+      <sprite>sprites\spr_chinlin_stand_up</sprite>
+      <sprite>sprites\spr_chinlin_stand_down</sprite>
+      <sprite>sprites\spr_chinlin_run_right</sprite>
+      <sprite>sprites\spr_chinlin_run_up</sprite>
+      <sprite>sprites\spr_chinlin_run_down</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
@@ -37,6 +54,8 @@
       <script>scripts\scr_get_face.gml</script>
       <script>scripts\scr_chance.gml</script>
       <script>scripts\scr_string_copy_words.gml</script>
+      <script>scripts\scr_save_game.gml</script>
+      <script>scripts\scr_load_game.gml</script>
     </scripts>
     <scripts name="Player States">
       <script>scripts\scr_move_state.gml</script>
@@ -51,6 +70,7 @@
       <scripts name="Enemy Helper Scripts">
         <script>scripts\scr_enemy_choose_next_state.gml</script>
         <script>scripts\scr_check_for_player.gml</script>
+        <script>scripts\scr_move_axis.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -62,6 +82,7 @@
     <object>objects\obj_view</object>
     <object>objects\obj_dash_effect</object>
     <object>objects\obj_enemy_slime</object>
+    <object>objects\obj_enemy_chinlin</object>
     <object>objects\obj_damage</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_expr</object>
@@ -71,6 +92,7 @@
     <object>objects\obj_dialog</object>
     <object>objects\obj_sign</object>
     <object>objects\obj_pause_menu</object>
+    <object>objects\obj_projectile</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_one</room>
@@ -81,7 +103,7 @@
     <rtf>help.rtf</rtf>
   </help>
   <TutorialState>
-    <IsTutorial>0</IsTutorial>
+    <IsTutorial>-1</IsTutorial>
     <TutorialName>C:\Users\Jeff\AppData\Local\GameMaker-Studio\tutorials\04_Gameplay\</TutorialName>
     <TutorialPage>0</TutorialPage>
   </TutorialState>
