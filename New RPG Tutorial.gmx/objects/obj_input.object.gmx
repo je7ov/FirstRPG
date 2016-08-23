@@ -27,6 +27,11 @@
             <kind>1</kind>
             <string>/// Initialize the input object
 scr_get_input();
+
+// Start background music
+audio_sound_gain(snd_background_music, 0, 0);
+audio_play_sound(snd_background_music, 10, true);
+audio_sound_gain(snd_background_music, .20, 5000);
 </string>
           </argument>
         </arguments>

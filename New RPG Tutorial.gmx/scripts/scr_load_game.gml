@@ -33,4 +33,3 @@ with(obj_player_stats) {
 }
 
 ds_map_destroy(save_data);
-audio_stop_sound(snd_background_music);

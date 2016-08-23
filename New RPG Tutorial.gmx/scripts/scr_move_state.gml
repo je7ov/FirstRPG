@@ -40,6 +40,7 @@ if(obj_input.attack_key) {
 if(obj_input.spell_key) {
     audio_play_sound(snd_dark_blast, 7, false); 
     var p = instance_create(x, y, obj_projectile);
+
     p.creator = id;
     var xforce = lengthdir_x(20, face * 90);
     var yforce = lengthdir_y(20, face * 90);

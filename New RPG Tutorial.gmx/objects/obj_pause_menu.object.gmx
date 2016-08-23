@@ -89,7 +89,13 @@ if(alarm[0] &lt;= 0) {
         } else {
             menu_index = 0;
         }
-        alarm[0] = room_speed / 4;
+        
+        if(gamepad_is_connected(0)){
+            alarm[0] = room_speed / 5;
+        } else {
+            alarm[0] = room_speed / 8;
+        }
+        
     }
     // Move cursor up
     if(obj_input.yaxis &lt; 0) {
@@ -98,7 +104,11 @@ if(alarm[0] &lt;= 0) {
         } else {
             menu_index = array_length_1d(option) -1;
         }
-        alarm[0] = room_speed / 4;
+        if(gamepad_is_connected(0)){
+            alarm[0] = room_speed / 5;
+        } else {
+            alarm[0] = room_speed / 8;
+        }
     }
 }
 
