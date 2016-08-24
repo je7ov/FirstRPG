@@ -20,14 +20,14 @@
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_enemy_slime</sprite>
     <sprites name="player">
+      <sprite>sprites\spr_player_right</sprite>
       <sprite>sprites\spr_player_up</sprite>
       <sprite>sprites\spr_player_left</sprite>
-      <sprite>sprites\spr_player_right</sprite>
       <sprite>sprites\spr_player_down</sprite>
       <sprite>sprites\spr_player_shadow</sprite>
+      <sprite>sprites\spr_player_attack_right</sprite>
       <sprite>sprites\spr_player_attack_up</sprite>
       <sprite>sprites\spr_player_attack_left</sprite>
-      <sprite>sprites\spr_player_attack_right</sprite>
       <sprite>sprites\spr_player_attack_down</sprite>
     </sprites>
     <sprite>sprites\spr_damage</sprite>
@@ -43,6 +43,8 @@
       <sprite>sprites\spr_chinlin_run_up</sprite>
       <sprite>sprites\spr_chinlin_run_down</sprite>
     </sprites>
+    <sprite>sprites\spr_sword</sprite>
+    <sprite>sprites\spr_axe</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
@@ -56,6 +58,7 @@
       <script>scripts\scr_string_copy_words.gml</script>
       <script>scripts\scr_save_game.gml</script>
       <script>scripts\scr_load_game.gml</script>
+      <script>scripts\scr_animation_hit_frame.gml</script>
     </scripts>
     <scripts name="Player States">
       <script>scripts\scr_move_state.gml</script>
@@ -73,6 +76,7 @@
         <script>scripts\scr_move_axis.gml</script>
       </scripts>
     </scripts>
+    <script>scripts\scr_swap_weapons.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_lifeform_parent</object>
@@ -93,6 +97,8 @@
     <object>objects\obj_sign</object>
     <object>objects\obj_pause_menu</object>
     <object>objects\obj_projectile</object>
+    <object>objects\obj_weapon_animation</object>
+    <object>objects\obj_weapon_item</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_one</room>

@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize Variables
+if(instance_number(obj_player) &gt; 1) instance_destroy();
 event_inherited();
 // Player movement speed
 movespeed = 4;
@@ -42,9 +43,9 @@ image_speed = 0;
 xaxis = 0;
 yaxis = 0;
 
-// State variables
+// State variable
 state = scr_move_state;
-attacked = false;
+weapon_sprite = spr_sword;
 
 // Create sprite array
 sprite[RIGHT, MOVE] = spr_player_right;
